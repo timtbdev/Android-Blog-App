@@ -1,0 +1,54 @@
+[versions]
+#Android - Versions
+android_minSdk="21"
+android_targetSdk="33"
+android_compileSdk="34"
+
+#Plugins - Versions
+androidGradlePlugin="8.1.1"
+kotlin="1.8.10"
+ksp="1.8.10-1.0.9"
+dagger="2.47"
+androidxComposeCompiler = "1.4.8"
+androidxComposeBom="2023.09.00"
+
+#Dependencies - Versions
+androidxCoreKtx = "1.12.0"
+androidxLifecycleRuntimeKtx="2.6.2"
+androidxActivityCompose="1.7.2"
+#Dependencies - Version - Test
+junit="4.13.2"
+androidxTestJunit="1.1.5"
+androidxTestEspressoCore="3.5.1"
+
+[libraries]
+#AndroidX
+androidx-core-ktx={module="androidx.core:core-ktx", version.ref="androidxCoreKtx"}
+androidx-lifecycle-runtime-ktx={module="androidx.lifecycle:lifecycle-runtime-ktx", version.ref="androidxLifecycleRuntimeKtx"}
+androidx-activity-compose={module="androidx.activity:activity-compose", version.ref="androidxActivityCompose"}
+#Compose
+androidx-compose-bom={module="androidx.compose:compose-bom", version.ref="androidxComposeBom"}
+androidx-compose-ui={module="androidx.compose.ui:ui"}
+androidx-compose-ui-graphics={module="androidx.compose.ui:ui-tooling-preview"}
+androidx-compose-ui-tooling-preview={module="androidx.compose.ui:ui-tooling-preview"}
+androidx-compose-material3={module="androidx.compose.material3:material3"}
+androidx-compose-ui-test={module="androidx.compose.ui:ui-test-junit4"}
+androidx-cmopose-ui-tooling={module="androidx.compose.ui:ui-tooling"}
+androidx-compose-ui-test-manifest={module="androidx.compose.ui:ui-test-manifest"}
+#Hilt
+dagger-hilt-android={module="com.google.dagger:hilt-android", version.ref="dagger"}
+dagger-hilt-compiler={module="com.google.dagger:hilt-android-compiler", version.ref="dagger"}
+#Test
+junit={module="junit:junit", version.ref="junit"}
+androidx-test-junit={module="androidx.test.ext:junit", version.ref="androidxTestJunit"}
+androidx-test-espresso-core={module="androidx.test.espresso:espresso-core", version.ref="androidxTestEspressoCore"}
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+
